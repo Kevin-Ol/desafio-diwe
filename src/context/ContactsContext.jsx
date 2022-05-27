@@ -53,14 +53,26 @@ export function ContactsProvider({ children }) {
     });
   }, []);
 
+  const sortContacts = useCallback((field, order) => {
+    setContacts((oldContacts) => {
+      const copyContacts = [...oldContacts];
+      const reversed = order === "asc" ? 1 : -1;
+      return copyContacts.sort(
+        (a, b) =>
+          reversed * a[field].toString().localeCompare(b[field].toString())
+      );
+    });
+  }, []);
+
   const value = useMemo(
     () => ({
       contacts,
       loading,
       deleteContact,
       updateContact,
+      sortContacts,
     }),
-    [contacts, loading, deleteContact, updateContact]
+    [contacts, loading, deleteContact, updateContact, sortContacts]
   );
 
   return (
