@@ -17,7 +17,12 @@ function AllContacts() {
         const { data } = await api.get("contacts");
         setContacts(data);
       } catch (error) {
-        global.alert("Usuário não autenticado");
+        const { status } = error.response;
+        if (status === 401) {
+          global.alert("Usuário não autenticado");
+        } else {
+          global.alert("Erro no sistema, tente novamente mais tarde");
+        }
         navigate("/");
       }
       setLoading(false);
