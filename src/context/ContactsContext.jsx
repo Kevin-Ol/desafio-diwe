@@ -45,13 +45,22 @@ export function ContactsProvider({ children }) {
     );
   }, []);
 
+  const updateContact = useCallback((id, updateInfo) => {
+    setContacts((oldContacts) => {
+      const previousContact = oldContacts.find((contact) => contact.id === id);
+      Object.assign(previousContact, updateInfo);
+      return oldContacts;
+    });
+  }, []);
+
   const value = useMemo(
     () => ({
       contacts,
       loading,
       deleteContact,
+      updateContact,
     }),
-    [contacts, loading, deleteContact]
+    [contacts, loading, deleteContact, updateContact]
   );
 
   return (

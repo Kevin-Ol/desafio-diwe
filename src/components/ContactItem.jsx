@@ -1,12 +1,16 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import DeleteContactModal from "./DeleteContactModal";
+import UpdateContactModal from "./UpdateContactModal";
 
 function ContactItem({ contact }) {
   const { id, name, mobile, email } = contact;
 
   const [deleteModalIsOpen, setDeleteModalIsOpen] = useState(false);
+  const [updateModalIsOpen, setUpdateModalIsOpen] = useState(false);
+
   const handleDeleteModal = () => setDeleteModalIsOpen((oldState) => !oldState);
+  const handleUpdateModal = () => setUpdateModalIsOpen((oldState) => !oldState);
 
   return (
     <tr>
@@ -15,7 +19,14 @@ function ContactItem({ contact }) {
       <td>{mobile}</td>
       <td>{email}</td>
       <td>
-        <button type="button">Editar</button>
+        <button type="button" onClick={handleUpdateModal}>
+          Editar
+        </button>
+        <UpdateContactModal
+          modalIsOpen={updateModalIsOpen}
+          handleModal={handleUpdateModal}
+          contact={contact}
+        />
         <button type="button" onClick={handleDeleteModal}>
           Excluir
         </button>
