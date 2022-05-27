@@ -1,9 +1,12 @@
 import { useState, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 import api from "../services/api";
 import LoginImage from "../assets/login.png";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -13,7 +16,7 @@ function Login() {
       setErrorMessage("");
       const { data } = await api.post("auth/login", credentials);
       api.defaults.headers.common.authorization = `Bearer ${data.token}`;
-      setLoading(false);
+      navigate("/contacts/list");
     } catch (error) {
       const { status } = error.response;
       if (status === 400) {
@@ -21,8 +24,8 @@ function Login() {
       } else {
         setErrorMessage("Erro no sistema, tente novamente mais tarde");
       }
-      setLoading(false);
     }
+    setLoading(false);
   }, []);
 
   return (
