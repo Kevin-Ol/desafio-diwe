@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import PropTypes from "prop-types";
 import api from "../services/api";
 import { useContacts } from "../context/ContactsContext";
+import "../styles/DeleteContactModal.scss";
 
 Modal.setAppElement("#root");
 
@@ -33,9 +34,10 @@ function DeleteContactModal({ modalIsOpen, handleModal, id }) {
       onRequestClose={handleModal}
       contentLabel="Delete contact modal"
       className="delete-contact-modal"
+      overlayClassName="delete-contact-modal-overlay"
     >
       <section>
-        <h2>Tem certeza que deseja excluir este contato?</h2>
+        <h1>Tem certeza que deseja excluir este contato?</h1>
         <p>Após excluir, não será possível recuperar o contato.</p>
         <div>
           <button type="button" onClick={handleDelete} disabled={loading}>

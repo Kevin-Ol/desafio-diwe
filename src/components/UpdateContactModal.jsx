@@ -45,6 +45,7 @@ function UpdateContactModal({ modalIsOpen, handleModal, contact }) {
       onRequestClose={handleModal}
       contentLabel="Update contact modal"
       className="update-contact-modal"
+      overlayClassName="update-contact-modal-overlay"
     >
       <form className="update-contact-form" onSubmit={handleSubmit}>
         <h1>Atualizar contato</h1>

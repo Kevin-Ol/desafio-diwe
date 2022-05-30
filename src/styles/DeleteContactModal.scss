@@ -1,19 +1,16 @@
 @use 'variables';
 
-.update-contact-form{
+.delete-contact-modal{
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-
-  display: flex;
-  flex-direction: column;
+  padding: 4rem 3.2rem;
   background:  variables.$white;
   box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.04);
   border-radius: 8px;
 
   padding: 4rem 3.2rem;
-
   h1 {
     color: variables.$blue-title;
     font-size: 2.4rem;
@@ -34,44 +31,6 @@
     letter-spacing: -0.02em;
   }
 
-  label {
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 1.48;
-    letter-spacing: -0.02em;
-    color: variables.$blue-label;
-    margin-bottom: 2.4rem;
-  }
-
-  input {
-    width: 100%;
-    padding: 1.6rem;
-    background: variables.$input-background;
-    border-radius: 8px;
-    border: none;
-
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.48;
-    letter-spacing: -0.02em;
-    margin-top: 0.3rem;
-
-    &::-webkit-input-placeholder { /* Edge */
-      color: variables.$input-placeholder;
-      opacity: 0.64;
-    }
-    
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-      color: variables.$input-placeholder;
-      opacity: 0.64;
-    }
-    
-    &::placeholder {
-      color: variables.$input-placeholder;
-      opacity: 0.64;
-    }
-  }
-
   div {
     display: flex;
     flex-direction: column;
@@ -89,17 +48,17 @@
       transition: all 0.3s;
 
       &:first-child {
-        background: variables.$login-btn;
+        background: variables.$delete-contact-btn;
         color: variables.$white;
         margin-bottom: 1rem;
 
         &:hover {
           box-shadow: inset 0 0 0 3px variables.$black;
-          background: variables.$login-btn-hover;
+          background: variables.$delete-contact-btn-hover;
         }
     
         &:disabled {
-          background: variables.$login-btn-disabled;
+          background: variables.$delete-contact-btn-disabled;
           cursor: not-allowed;
         }
       }
@@ -117,11 +76,11 @@
   }
 }
 
-.update-contact-modal-overlay {
+.delete-contact-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(34, 32, 32, 0.749);
+  background-color: rgba(34, 32, 32, 0.75);
 }
