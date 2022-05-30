@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 import api from "../services/api";
 import LoginImage from "../assets/login.png";
+import "../styles/Login.scss";
 
 function Login() {
   const navigate = useNavigate();

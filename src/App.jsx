@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import AllContacts from "./pages/AllContacts";
 import NewContact from "./pages/NewContact";
 import { ContactsProvider } from "./context/ContactsContext";
+import "./styles/App.scss";
 
 function App() {
   return (

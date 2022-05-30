@@ -17,7 +17,7 @@ function LoginForm({ handleLogin, errorMessage, loading }) {
 
   return (
     <form className="login-form" onSubmit={handleSubmit}>
-      <h1>Bem vindo!</h1>
+      <h1>Bem-vindo!</h1>
       <p>Faça login para acessar nossa plataforma</p>
       <label htmlFor="email">
         Email
