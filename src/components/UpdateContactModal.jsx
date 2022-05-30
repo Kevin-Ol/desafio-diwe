@@ -6,7 +6,7 @@ import api from "../services/api";
 import { useContacts } from "../context/ContactsContext";
 import "../styles/UpdateContactModal.scss";
 
-Modal.setAppElement("#root");
+if (process.env.NODE_ENV !== "test") Modal.setAppElement("#app");
 
 function UpdateContactModal({ modalIsOpen, handleModal, contact }) {
   const { updateContact } = useContacts();
