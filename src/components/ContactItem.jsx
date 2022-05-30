@@ -25,7 +25,11 @@ function ContactItem({ contact }) {
       <td>{email}</td>
       <td>
         <button type="button" onClick={handleUpdateModal}>
-          <img src={Edit} alt="Ícone representando edição" />
+          <img
+            src={Edit}
+            data-testid={`edit-btn-${contact.id}`}
+            alt="Ícone representando edição"
+          />
           Editar
         </button>
         <UpdateContactModal
@@ -33,7 +37,11 @@ function ContactItem({ contact }) {
           handleModal={handleUpdateModal}
           contact={contact}
         />
-        <button type="button" onClick={handleDeleteModal}>
+        <button
+          type="button"
+          data-testid={`delete-btn-${contact.id}`}
+          onClick={handleDeleteModal}
+        >
           <img src={Trash} alt="Ícone representando exclusão" />
           Excluir
         </button>
