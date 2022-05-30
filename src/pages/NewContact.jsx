@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import NewContactForm from "../components/NewContactForm";
 import api from "../services/api";
 import Header from "../components/Header";
+import "../styles/NewContact.scss";
 
 function NewContact() {
   const navigate = useNavigate();

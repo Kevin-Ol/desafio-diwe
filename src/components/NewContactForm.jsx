@@ -38,31 +38,33 @@ function NewContactForm({ handleContact, statusMessage, loading }) {
           onChange={handleName}
         />
       </label>
-      <label htmlFor="email">
-        Email
-        <input
-          name="email"
-          type="email"
-          id="email"
-          required
-          placeholder="Digite o email"
-          value={email}
-          onChange={handleEmail}
-        />
-      </label>
-      <label htmlFor="mobile">
-        Celular
-        <InputMask
-          mask="(99) 99999-9999"
-          name="mobile"
-          type="tel"
-          id="mobile"
-          required
-          placeholder="Digite o celular"
-          value={mobile}
-          onChange={handleMobile}
-        />
-      </label>
+      <div>
+        <label htmlFor="email">
+          Email
+          <input
+            name="email"
+            type="email"
+            id="email"
+            required
+            placeholder="Digite o email"
+            value={email}
+            onChange={handleEmail}
+          />
+        </label>
+        <label htmlFor="mobile">
+          Celular
+          <InputMask
+            mask="(99) 99999-9999"
+            name="mobile"
+            type="tel"
+            id="mobile"
+            required
+            placeholder="Digite o celular"
+            value={mobile}
+            onChange={handleMobile}
+          />
+        </label>
+      </div>
       <p className="status-message">{statusMessage}</p>
       <button type="submit" disabled={loading}>
         Cadastrar contato
