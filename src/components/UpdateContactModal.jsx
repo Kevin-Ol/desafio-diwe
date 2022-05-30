@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import InputMask from "react-input-mask";
 import api from "../services/api";
 import { useContacts } from "../context/ContactsContext";
+import "../styles/UpdateContactModal.scss";
 
 Modal.setAppElement("#root");
 
