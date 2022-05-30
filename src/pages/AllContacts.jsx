@@ -1,6 +1,7 @@
 import ContactsList from "../components/ContactsList";
 import Header from "../components/Header";
 import { useContacts } from "../context/ContactsContext";
+import "../styles/AllContacts.scss";
 
 function AllContacts() {
   const { contacts, loading } = useContacts();

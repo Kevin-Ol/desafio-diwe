@@ -8,7 +8,7 @@ function TableHeader({ headers }) {
         {headers.map((header) => (
           <SortingHeader key={header.name} header={header} />
         ))}
-        <td name="actions">Ações</td>
+        <th name="actions">Ações</th>
       </tr>
     </thead>
   );

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useContacts } from "../context/ContactsContext";
+import ChevronDown from "../assets/chevron-down.svg";
+import ChevronUp from "../assets/chevron-up.svg";
 
 function SortingHeader({ header }) {
   const { sortContacts } = useContacts();
@@ -15,9 +17,14 @@ function SortingHeader({ header }) {
   }, [order]);
 
   return (
-    <td role="gridcell" name={header.name} onClick={handleSort}>
+    <th role="gridcell" name={header.name} onClick={handleSort}>
       {header.field}
-    </td>
+      {order === "desc" ? (
+        <img src={ChevronDown} alt="Ícone representando ordem descrescente" />
+      ) : (
+        <img src={ChevronUp} alt="Ícone representando ordem crescente" />
+      )}
+    </th>
   );
 }
 

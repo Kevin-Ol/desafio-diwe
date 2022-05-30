@@ -1,0 +1,30 @@
+@use 'variables';
+
+header {
+  width: 100vw;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+  padding: 3.1rem 5.6rem;
+  background:  variables.$white;
+
+  a {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
+    font-size: 1.8rem;
+    line-height: 1.44;
+    letter-spacing: -0.02em;
+    color: variables.$header-text;
+    text-decoration: none;
+    transition: 0.3s;
+
+    img {
+      margin-right: 0.8rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      color: variables.$black;
+    }
+  }
+}

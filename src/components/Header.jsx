@@ -1,10 +1,15 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import ArrowLeft from "../assets/arrow-left.svg";
+import "../styles/Header.scss";
 
 function Header({ link }) {
   return (
     <header>
-      <Link to={link}>Voltar</Link>
+      <Link to={link}>
+        <img src={ArrowLeft} alt="Ícone representando seta para voltar" />
+        Voltar
+      </Link>
     </header>
   );
 }

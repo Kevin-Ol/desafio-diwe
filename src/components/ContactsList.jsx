@@ -13,8 +13,10 @@ function ContactsList({ contacts }) {
 
   return (
     <section className="contacts-section">
-      <h2>Listagem de contatos</h2>
-      <Link to="/contacts/create">Adicionar novo contato</Link>
+      <div>
+        <h2>Listagem de contatos</h2>
+        <Link to="/contacts/create">Adicionar novo contato</Link>
+      </div>
       <table role="grid">
         <TableHeader headers={headers} />
         <tbody>
