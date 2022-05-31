@@ -6,8 +6,6 @@ import api from "../services/api";
 import { useContacts } from "../context/ContactsContext";
 import "../styles/UpdateContactModal.scss";
 
-if (process.env.NODE_ENV !== "test") Modal.setAppElement("#app");
-
 function UpdateContactModal({ modalIsOpen, handleModal, contact }) {
   const { updateContact } = useContacts();
 
@@ -22,9 +20,11 @@ function UpdateContactModal({ modalIsOpen, handleModal, contact }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    const onlyNumbers = (text) => text.replace(/[^0-9]/g, "");
+
     try {
       setLoading(true);
-      const updateInfo = { name, email, mobile };
+      const updateInfo = { name, email, mobile: onlyNumbers(mobile) };
       await api.put(`contacts/${contact.id}`, updateInfo);
       updateContact(contact.id, updateInfo);
     } catch (error) {

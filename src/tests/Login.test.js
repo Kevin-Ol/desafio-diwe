@@ -5,6 +5,9 @@ import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "../App";
 import renderWithRouter from "./renderWithRouter";
+import ReactModal from "react-modal";
+
+ReactModal.setAppElement(document.createElement("div"));
 
 jest.mock("axios", () => ({
   create: jest.fn().mockReturnThis(),

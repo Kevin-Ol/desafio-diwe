@@ -5,8 +5,6 @@ import api from "../services/api";
 import { useContacts } from "../context/ContactsContext";
 import "../styles/DeleteContactModal.scss";
 
-if (process.env.NODE_ENV !== "test") Modal.setAppElement("#app");
-
 function DeleteContactModal({ modalIsOpen, handleModal, id }) {
   const [loading, setLoading] = useState(false);
   const { deleteContact } = useContacts();
