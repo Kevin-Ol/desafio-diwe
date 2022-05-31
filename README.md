@@ -38,13 +38,16 @@ Foi feito um deploy do projeto através da plaforma Vercel, que pode ser acessad
 2. Instale as dependências
   * `npm install`
 
-3. Inicie o projeto
+3. Configure as variáveis de ambiente
+  * No repositório há o arquivo `.env.example` com a url da API, basta renomear o arquivo para `.env`
+
+4. Inicie o projeto
   * `npm start`
 
-4. A aplicação iniciará na porta 3000:
+5. A aplicação iniciará na porta 3000:
   * `http://localhost:3000/`
 
-5. Também é possível testar o projeto com o comando
+6. Também é possível testar o projeto com o comando
   * `npm test`
 
 ## Bibliotecas utilizadas
