@@ -9,7 +9,7 @@ contatos, que são armazenados em uma API também fornecida, sendo necessário r
 
 Para ter acesso às funcionalidades do projeto, é necessário fazer o login com as credenciais abaixo. Com o login feito, é possível visualizar uma lista de contatos, onde o título de cada coluna age como um ordenador, capaz de ordenar os contatos em ordem crescente ou decrescente. Em cada contato há botoẽs para editar ou excluir, que abrem modais com as respectivas funcionalidades, e também um botão "Adicionar novo contato" que leva o usuário para a página de criação, onde são necessários o nome completo, email e telefone celular para criar um novo contato. 
 
-Em cada uma das páginas também há umheader com a  opção de retornar a página anterior. Não foi implementado nenhum sistema para perdurar o token de autenticação, portanto caso o usuário atualize a página perderá o acesso e terá de realizar o login novamente.
+Em cada uma das páginas também há um header com a  opção de retornar à página anterior. Não foi implementado nenhum sistema para perdurar o token de autenticação, portanto caso o usuário atualize a página perderá o acesso e terá de realizar o login novamente.
 
 A Página foi desenvolvida utilizando o framework React, SASS para estilização, React Testing Library para realizar testes de integração Eslint e prop-types para padronização e minimizar erros de código, e algumas bibliotecas de componentes.
 
