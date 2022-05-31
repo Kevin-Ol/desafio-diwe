@@ -31,22 +31,22 @@ const formElements = () => {
   };
 };
 
-describe("Renderiza contatos com sucesso", () => {
-  const contacts = [
-    {
-      id: 1,
-      name: "contato1",
-      email: "contato.1@email.com",
-      mobile: "11111111111",
-    },
-    {
-      id: 2,
-      name: "contato2",
-      email: "contato.2@email.com",
-      mobile: "22222222222",
-    },
-  ];
+const contacts = [
+  {
+    id: 1,
+    name: "contato1",
+    email: "contato.1@email.com",
+    mobile: "11111111111",
+  },
+  {
+    id: 2,
+    name: "contato2",
+    email: "contato.2@email.com",
+    mobile: "22222222222",
+  },
+];
 
+describe("Renderiza contatos com sucesso", () => {
   beforeEach(async () => {
     axios.post.mockImplementationOnce(() =>
       Promise.resolve({ data: { token: "token" } })
@@ -90,22 +90,7 @@ describe("Renderiza contatos com sucesso", () => {
 });
 
 describe("Redireciona para página de criar contato", () => {
-  const contacts = [
-    {
-      id: 1,
-      name: "contato1",
-      email: "contato.1@email.com",
-      mobile: "11111111111",
-    },
-    {
-      id: 2,
-      name: "contato2",
-      email: "contato.2@email.com",
-      mobile: "22222222222",
-    },
-  ];
-
-  beforeEach(async () => {
+  beforeEach(() => {
     axios.post.mockImplementationOnce(() =>
       Promise.resolve({ data: { token: "token" } })
     );
@@ -142,22 +127,7 @@ describe("Redireciona para página de criar contato", () => {
 });
 
 describe("Redireciona para tela inicial", () => {
-  const contacts = [
-    {
-      id: 1,
-      name: "contato1",
-      email: "contato.1@email.com",
-      mobile: "11111111111",
-    },
-    {
-      id: 2,
-      name: "contato2",
-      email: "contato.2@email.com",
-      mobile: "22222222222",
-    },
-  ];
-
-  beforeEach(async () => {
+  beforeEach(() => {
     axios.post.mockImplementationOnce(() =>
       Promise.resolve({ data: { token: "token" } })
     );

@@ -15,7 +15,7 @@ function NewContact() {
     try {
       setLoading(true);
       setStatusMessage("");
-      await api.post("/contacts", contactInfo);
+      await api.post("contacts", contactInfo);
       setStatusMessage("Contato cadastrado com sucesso!");
     } catch (error) {
       const { status } = error.response;
