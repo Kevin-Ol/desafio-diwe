@@ -5,7 +5,7 @@
 Página desenvolvida em React para o desafio técnico do processo seletivo de Pessoa Desenvolvedora Front-End na empresa DIWE.
 
 Foi fornecido um projeto via figma, onde deveria ser criado a partir dele  uma lista de contatos, capaz de adicionar, visualizar, editar e remover
-contatos, que são armazenados em uma API também fornecida, sendo também necessário realizar um login para a autenticação. 
+contatos, que são armazenados em uma API também fornecida, sendo necessário realizar um login para a autenticação. 
 
 Para ter acesso às funcionalidades do projeto, é necessário fazer o login com as credenciais abaixo. Com o login feito, é possível visualizar uma lista de contatos, onde o título de cada coluna age como um ordenador, capaz de ordenar os contatos em ordem crescente ou decrescente. Em cada contato há botoẽs para editar ou excluir, que abrem modais com as respectivas funcionalidades, e também um botão "Adicionar novo contato" que leva o usuário para a página de criação, onde são necessários o nome completo, email e telefone celular para criar um novo contato. 
 
