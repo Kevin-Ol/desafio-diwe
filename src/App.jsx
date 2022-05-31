@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import AllContacts from "./pages/AllContacts";
 import NewContact from "./pages/NewContact";
@@ -18,6 +18,7 @@ function App() {
         }
       />
       <Route path="/contacts/create" element={<NewContact />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
